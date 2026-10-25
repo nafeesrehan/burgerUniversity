@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+stitch_website/
+scratch_sections.html
+extracted_sections_utf8.html
+build-index.mjs
+fix-supporting-pages.mjs
+setup-git.mjs
+*.log

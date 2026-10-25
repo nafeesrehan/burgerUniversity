@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"background":"#fff8f5","on-primary-container":"#fffeff","surface-variant":"#efe0d8","on-tertiary-fixed-variant":"#703712","on-secondary-container":"#714e00","surface-container-lowest":"#ffffff","on-primary-fixed":"#400200","on-secondary-fixed-variant":"#5f4100","tertiary-container":"#a9643c","on-background":"#211a16","surface-container-high":"#f4e5de","on-primary":"#ffffff","tertiary-fixed":"#ffdbca","inverse-primary":"#ffb4a7","secondary-fixed-dim":"#fbbb45","secondary-fixed":"#ffdeac","on-secondary":"#ffffff","error":"#ba1a1a","surface-dim":"#e6d7d0","primary":"#b32514","inverse-surface":"#372f2a","tertiary":"#8c4c26","tertiary-fixed-dim":"#ffb68f","inverse-on-surface":"#fdeee6","surface-bright":"#fff8f5","primary-fixed-dim":"#ffb4a7","on-tertiary":"#ffffff","on-tertiary-fixed":"#331200","primary-fixed":"#ffdad4","secondary":"#7e5700","surface-container-highest":"#efe0d8","on-surface-variant":"#5a403c","on-error":"#ffffff","error-container":"#ffdad6","surface-tint":"#b52715","surface":"#fff8f5","surface-container-low":"#fff1ea","on-secondary-fixed":"#281900","on-error-container":"#93000a","primary-container":"#d63f2a","on-primary-fixed-variant":"#910a00","on-surface":"#211a16","on-tertiary-container":"#fffeff","surface-container":"#faebe4","secondary-container":"#ffbe47","outline-variant":"#e3beb8","outline":"#8e706b"},borderRadius:{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},spacing:{"gutter":"1.25rem","space-xl":"2.5rem","space-lg":"1.5rem","gutter-sm":"0.75rem","space-xs":"0.25rem","space-sm":"0.5rem","space-md":"1rem","margin":"2rem","margin-mobile":"1rem"},fontFamily:{"body-lg":["DM Sans"],"headline-lg-mobile":["Newsreader"],"label-lg":["Space Mono"],"headline-md":["Newsreader"],"headline-sm":["Newsreader"],"label-sm":["Space Mono"],"label-md":["Space Mono"],"body-sm":["DM Sans"],"body-md":["DM Sans"],"headline-lg":["Newsreader"],"display-hero":["Newsreader"],"display-hero-mobile":["Newsreader"]},fontSize:{"body-lg":["18px",{"lineHeight":"26px","fontWeight":"400"}],"headline-lg-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"700"}],"headline-md":["28px",{"lineHeight":"34px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["22px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"22px","fontWeight":"400"}],"headline-lg":["44px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"700"}],"display-hero":["64px",{"lineHeight":"68px","letterSpacing":"-0.03em","fontWeight":"800"}],"display-hero-mobile":["40px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin h-20 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><a class="flex items-center gap-space-sm group focus:outline-none" href="index.html"><img alt="Burger University Wordmark Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWfIkuFLfNB2HGrQgPCLLWY7fxMQ9auH34ORuoOlmT73Mgk5afx0FDnSRH9KPMrOZZytcPQguvQpZQNiXhvuJS5Kv2oKOpqMTPQpbWUv3k0auPGOZfHcVH0F3jMZsZRGQiJYbRu3beHPAEEqDHFDo1mGWfxm_r6PSGLilQ98bOty8cE6A_pMnZfKOVpAUQI-zVMcM_7o6bDB6QGBHEm5_-nz8h7oMpSm2sxcSecQtccM-tSWoswpjl8Q"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">Burger University</span></a></div><nav class="hidden lg:flex items-center gap-space-md" data-active-classes="bg-surface-container text-on-surface font-label-md font-bold rounded-full px-space-md py-space-xs"><a class="text-on-surface hover:text-primary transition-colors font-label-md text-label-md tracking-wider uppercase px-space-sm py-space-xs" href="index.html">Home</a><a aria-current="page" class="transition-colors tracking-wider uppercase bg-surface-container text-on-surface font-label-md font-bold rounded-full px-space-md py-space-xs" href="menu.html">Menu</a><a class="text-on-surface hover:text-primary transition-colors font-label-md text-label-md tracking-wider uppercase px-space-sm py-space-xs" href="book-a-table.html">Book a Table</a><a class="text-on-surface hover:text-primary transition-colors font-label-md text-label-md tracking-wider uppercase px-space-sm py-space-xs" href="about.html">About</a><a class="text-on-surface hover:text-primary transition-colors font-label-md text-label-md tracking-wider uppercase px-space-sm py-space-xs" href="contact.html">Contact</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:inline-flex items-center justify-center bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-space-lg py-space-sm rounded-full font-label-md text-label-md transition-all shadow-[2px_2px_0px_#211a16] hover:translate-y-[-1px]" href="menu.html">Order Now</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Toggle Menu" class="lg:hidden p-space-xs text-on-surface hover:text-primary transition-colors focus:outline-none" onclick="const d=document.getElementById('mobile-drawer'); d.classList.toggle('hidden'); d.classList.toggle('flex');" type="button"><span class="material-symbols-outlined text-headline-sm">menu</span></button></div></div></header><div class="hidden fixed inset-0 z-50 bg-inverse-surface text-inverse-on-surface flex-col justify-between p-margin-mobile sm:p-margin" id="mobile-drawer"><div class="flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Burger University Wordmark Logo" class="h-8 w-auto object-contain brightness-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWfIkuFLfNB2HGrQgPCLLWY7fxMQ9auH34ORuoOlmT73Mgk5afx0FDnSRH9KPMrOZZytcPQguvQpZQNiXhvuJS5Kv2oKOpqMTPQpbWUv3k0auPGOZfHcVH0F3jMZsZRGQiJYbRu3beHPAEEqDHFDo1mGWfxm_r6PSGLilQ98bOty8cE6A_pMnZfKOVpAUQI-zVMcM_7o6bDB6QGBHEm5_-nz8h7oMpSm2sxcSecQtccM-tSWoswpjl8Q"/><span class="font-headline-sm text-headline-sm text-inverse-on-surface">Burger University</span></div><button aria-label="Close Menu" class="p-space-xs text-inverse-on-surface hover:text-secondary-fixed-dim transition-colors focus:outline-none" onclick="const d=document.getElementById('mobile-drawer'); d.classList.toggle('hidden'); d.classList.toggle('flex');" type="button"><span class="material-symbols-outlined text-headline-md">close</span></button></div><nav class="flex flex-col gap-space-md my-auto py-space-lg"><a class="font-headline-lg-mobile text-headline-lg-mobile text-inverse-on-surface hover:text-secondary-fixed-dim transition-colors" href="index.html" onclick="document.getElementById('mobile-drawer').classList.add('hidden');">Home</a><a class="font-headline-lg-mobile text-headline-lg-mobile text-inverse-on-surface hover:text-secondary-fixed-dim transition-colors" href="menu.html" onclick="document.getElementById('mobile-drawer').classList.add('hidden');">Menu</a><a class="font-headline-lg-mobile text-headline-lg-mobile text-inverse-on-surface hover:text-secondary-fixed-dim transition-colors" href="book-a-table.html" onclick="document.getElementById('mobile-drawer').classList.add('hidden');">Book a Table</a><a class="font-headline-lg-mobile text-headline-lg-mobile text-inverse-on-surface hover:text-secondary-fixed-dim transition-colors" href="about.html" onclick="document.getElementById('mobile-drawer').classList.add('hidden');">About</a><a class="font-headline-lg-mobile text-headline-lg-mobile text-inverse-on-surface hover:text-secondary-fixed-dim transition-colors" href="contact.html" onclick="document.getElementById('mobile-drawer').classList.add('hidden');">Contact</a></nav><div class="flex flex-col gap-space-sm pt-space-md"><div class="font-label-sm text-label-sm text-outline-variant uppercase tracking-widest">NSB Road, Raniganj, WB</div><div class="font-label-md text-label-md text-secondary-fixed-dim">Mon-Sun: 11:00 AM - 11:00 PM</div></div></div><main class="w-full pt-20 pb-20 lg:pb-0 flex-1 bg-background"><div class="flex flex-col w-full">
+<!-- Interactive State Controller -->
+<script>
+    window.menuState = {
+      category: 'all',
+      dietary: 'all',
+      cartCount: 0,
+      cartTotal: 0,
+      items: {}
+    };
+
+    function filterMenu(type, value, btn) {
+      if (type === 'cat') {
+        window.menuState.category = value;
+        document.querySelectorAll('.cat-btn').forEach(el => {
+          el.className = 'cat-btn whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md tracking-wider transition-all bg-surface-container text-on-surface hover:bg-surface-variant';
+        });
+        btn.className = 'cat-btn whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md tracking-wider transition-all bg-on-background text-surface shadow-[2px_2px_0px_#211a16]';
+      } else if (type === 'diet') {
+        window.menuState.dietary = value;
+        document.querySelectorAll('.diet-btn').forEach(el => {
+          el.className = 'diet-btn inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full font-label-sm text-label-sm transition-all bg-surface-container-high text-on-surface hover:bg-surface-variant';
+        });
+        btn.className = 'diet-btn inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full font-label-sm text-label-sm transition-all bg-primary text-on-primary shadow-[1.5px_1.5px_0px_#211a16]';
+      }
+
+      const cards = document.querySelectorAll('.menu-item-card');
+      let visibleCount = 0;
+      cards.forEach(card => {
+        const itemCat = card.dataset.category;
+        const itemDiet = card.dataset.diet;
+        const itemSpicy = card.dataset.spicy === 'true';
+
+        let catMatch = (window.menuState.category === 'all' || itemCat === window.menuState.category);
+        let dietMatch = true;
+
+        if (window.menuState.dietary === 'veg') dietMatch = (itemDiet === 'veg');
+        else if (window.menuState.dietary === 'non-veg') dietMatch = (itemDiet === 'non-veg');
+        else if (window.menuState.dietary === 'spicy') dietMatch = itemSpicy;
+
+        if (catMatch && dietMatch) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      const zeroState = document.getElementById('zero-state');
+      if (visibleCount === 0) {
+        zeroState.classList.remove('hidden');
+      } else {
+        zeroState.classList.add('hidden');
+      }
+    }
+
+    function addToCart(title, price, btn) {
+      window.menuState.cartCount += 1;
+      window.menuState.cartTotal += price;
+      
+      const drawer = document.getElementById('cart-floating-drawer');
+      const countEl = document.getElementById('cart-floating-count');
+      const totalEl = document.getElementById('cart-floating-total');
+      
+      countEl.innerText = `${window.menuState.cartCount} ${window.menuState.cartCount === 1 ? 'item' : 'items'}`;
+      totalEl.innerText = `₹${window.menuState.cartTotal}`;
+      
+      drawer.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
+      drawer.classList.add('translate-y-0', 'opacity-100');
+
+      // micro-interaction pulse
+      btn.innerText = 'Added ✓';
+      btn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+      btn.classList.remove('bg-primary', 'text-on-primary');
+      setTimeout(() => {
+        btn.innerText = 'Add +';
+        btn.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+        btn.classList.add('bg-primary', 'text-on-primary');
+      }, 1200);
+    }
+  </script>
+<!-- Editorial Curriculum Header -->
+<section class="w-full relative overflow-hidden bg-surface-container-low pt-space-xl pb-space-lg">
+<!-- Subtle backdrop texture / ambient graphic -->
+<div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-12 bottom-0 w-64 h-64 rounded-full bg-primary/10 blur-2xl pointer-events-none"></div>
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin relative z-10">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="max-w-3xl flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm uppercase tracking-widest text-primary bg-primary-fixed px-space-sm py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+              Raniganj Kitchen • Batch 2025
+            </span>
+<span class="font-label-sm text-label-sm text-tertiary">NSB Road Outpost</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg lg:font-display-hero lg:text-display-hero text-on-background tracking-tight">
+            THE CURRICULUM
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt- space-xs">
+            Handcrafted smash burgers with griddled lace, mountain-style momos steamed to precision, and golden buttermilk crunch. Prepared fresh to order.
+          </p>
+</div>
+<!-- Legend / Dietary Quick Key -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-sm shadow-sm flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface">
+<span class="inline-flex items-center justify-center w-4 h-4 bg-error text-on-error rounded-xs text-[10px] font-bold">▲</span>
+<span>Non-Veg</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface">
+<span class="inline-flex items-center justify-center w-4 h-4 bg-[#238636] text-on-primary rounded-xs text-[10px] font-bold">●</span>
+<span>Veg Pure</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span>Spicy Craft</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sticky / Elevated Filter Bar -->
+<section class="sticky top-20 z-30 w-full bg-surface/90 backdrop-blur-md shadow-sm py-space-sm">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-sm">
+<!-- Primary Category Tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-0.5">
+<button class="cat-btn whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md tracking-wider transition-all bg-on-background text-surface shadow-[2px_2px_0px_#211a16]" onclick="filterMenu('cat', 'all', this)" type="button">
+          All Items
+        </button>
+<button class="cat-btn whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md tracking-wider transition-all bg-surface-container text-on-surface hover:bg-surface-variant" onclick="filterMenu('cat', 'burgers', this)" type="button">
+          Burgers
+        </button>
+<button class="cat-btn whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md tracking-wider transition-all bg-surface-container text-on-surface hover:bg-surface-variant" onclick="filterMenu('cat', 'momos', this)" type="button">
+          Momos
+        </button>
+<button class="cat-btn whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md tracking-wider transition-all bg-surface-container text-on-surface hover:bg-surface-variant" onclick="filterMenu('cat', 'crispy-chicken', this)" type="button">
+          Fried Chicken
+        </button>
+<button class="cat-btn whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md tracking-wider transition-all bg-surface-container text-on-surface hover:bg-surface-variant" onclick="filterMenu('cat', 'sides', this)" type="button">
+          Sides &amp; Dips
+        </button>
+<button class="cat-btn whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md tracking-wider transition-all bg-surface-container text-on-surface hover:bg-surface-variant" onclick="filterMenu('cat', 'beverages', this)" type="button">
+          Beverages &amp; Shakes
+        </button>
+<button class="cat-btn whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md tracking-wider transition-all bg-surface-container text-on-surface hover:bg-surface-variant" onclick="filterMenu('cat', 'combos', this)" type="button">
+          Combos
+        </button>
+</div>
+<!-- Secondary Dietary Filters -->
+<div class="flex items-center gap-space-xs shrink-0 self-end md:self-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider hidden sm:inline">Filter:</span>
+<button class="diet-btn inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full font-label-sm text-label-sm transition-all bg-primary text-on-primary shadow-[1.5px_1.5px_0px_#211a16]" onclick="filterMenu('diet', 'all', this)" type="button">
+          All
+        </button>
+<button class="diet-btn inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full font-label-sm text-label-sm transition-all bg-surface-container-high text-on-surface hover:bg-surface-variant" onclick="filterMenu('diet', 'non-veg', this)" type="button">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+          Non-Veg
+        </button>
+<button class="diet-btn inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full font-label-sm text-label-sm transition-all bg-surface-container-high text-on-surface hover:bg-surface-variant" onclick="filterMenu('diet', 'veg', this)" type="button">
+<span class="w-2 h-2 rounded-full bg-[#238636]"></span>
+          Veg
+        </button>
+<button class="diet-btn inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full font-label-sm text-label-sm transition-all bg-surface-container-high text-on-surface hover:bg-surface-variant" onclick="filterMenu('diet', 'spicy', this)" type="button">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+          Spicy
+        </button>
+</div>
+</div>
+</section>
+<!-- Main Menu Grid Section -->
+<section class="max-w-[1280px] w-full mx-auto px-margin-mobile lg:px-margin py-space-xl flex flex-col gap-space-xl">
+<!-- Banner Callout / Feature Strip -->
+<div class="w-full bg-inverse-surface text-inverse-on-surface rounded-DEFAULT p-space-md sm:p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md shadow-md relative overflow-hidden">
+<div class="flex items-start gap-space-md z-10">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">workspace_premium</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase tracking-widest">RANIGANJ SPECIAL DISPATCH</span>
+<span class="bg-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm text-on-primary">HOT DEAL</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-surface">The Semester Combo</h2>
+<p class="font-body-sm text-body-sm text-surface-variant">Varsity Double Smasher + Peri Peri Masala Crinkle Fries + House Salted Caramel Shake.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md w-full md:w-auto justify-between md:justify-end z-10 shrink-0">
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-outline-variant line-through">₹489</span>
+<span class="font-headline-md text-headline-md text-secondary-fixed-dim">₹399</span>
+</div>
+<button class="inline-flex items-center justify-center bg-secondary-container text-on-secondary-container hover:bg-secondary-fixed px-space-lg py-space-sm rounded-full font-label-md text-label-md uppercase tracking-wider transition-all shadow-[2px_2px_0px_#211a16] hover:translate-y-[-1px]" onclick="addToCart('The Semester Combo', 399, this)" type="button">
+          Order Combo
+        </button>
+</div>
+<!-- Background Graphic Accents -->
+<div class="absolute -right-8 -bottom-8 w-44 h-44 rounded-full bg-tertiary/20 blur-xl pointer-events-none"></div>
+</div>
+<!-- Product Catalog Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="menu-grid">
+<!-- ITEM 1: Varsity Double Smashed (IMG_2) -->
+<article class="menu-item-card flex flex-col bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm hover:shadow-md transition-all group" data-category="burgers" data-diet="non-veg" data-spicy="true">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img alt="Varsity Double Smashed Burger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7REeHTSVUOwrpSDED-BylluXgQnMUOWv717r_xR28QkPkQE_1wJOfa6q_OtoqQXXxKWRJvsEOUGlo9sLvSJ5rA4Byyfa9wgOOHSVMwJADpoozymcQDfuThipt1okNRXNXLEv0jeB8XFtr8SbsenVUsRKUG_FlUDpIupcJxQfqDTxE5iSzX2R5GYrOsFo0-X4exIRZk5rCqN2wFkNDzFRiG2DkIqz4f4N7qksAMI3Op-ET8s55H7lIOQ"/>
+<div class="absolute top-space-sm left-space-sm flex flex-col gap-1 items-start">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-space-sm py-0.5 rounded-full uppercase tracking-wider shadow-[1.5px_1.5px_0px_#211a16] rotate-[-2deg]">
+              House Signature
+            </span>
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-space-xs py-0.5 rounded-full shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span> Non-Veg
+            </span>
+</div>
+<div class="absolute top-space-sm right-space-sm bg-secondary-container text-on-secondary-container font-label-md text-label-md px-space-sm py-1 rounded-full shadow-[1.5px_1.5px_0px_#211a16]">
+            ₹289
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Varsity Double Smashed</h3>
+<div class="flex items-center text-primary" title="Medium Spicy">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Two crispy lacy patties smashed hard, melted American cheddar, grilled onions, pickles, tomato &amp; signature Varsity sauce in toasted brioche.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary">4.9 ★ (420+ reviews)</span>
+<button class="inline-flex items-center justify-center bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all shadow-[1.5px_1.5px_0px_#211a16] active:scale-95" onclick="addToCart('Varsity Double Smashed', 289, this)" type="button">
+              Add +
+            </button>
+</div>
+</div>
+</article>
+<!-- ITEM 2: Steamed Himalayan Chicken Momos (IMG_3) -->
+<article class="menu-item-card flex flex-col bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm hover:shadow-md transition-all group" data-category="momos" data-diet="non-veg" data-spicy="true">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img alt="Steamed Himalayan Chicken Momos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6tG7f4PLoySBLh6fMkzQV66ubosx7OV8gnbQAWRvV-PN0Z544_NRATr0kn5YJPYVYew5XOj-rWdlrgXqX0XQ0LSJ5GDCuxq2rlUQE2scBmIDIvZFLyGev95e249n5G8Q4RDr4uFY6Wv90CrdPp6RlEE09Z-x4WHaF_hjvuHODEyx_evpmXoBWf3sFbUQurKw8S_V3Zkter3M1hqEYZMWCyrEoLSzsfwfqevTygYrgX3uH3WU4valkNw"/>
+<div class="absolute top-space-sm left-space-sm flex flex-col gap-1 items-start">
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-space-sm py-0.5 rounded-full uppercase tracking-wider shadow-[1.5px_1.5px_0px_#211a16] rotate-[-2deg]">
+              Mountain Recipe
+            </span>
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-space-xs py-0.5 rounded-full shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span> Non-Veg
+            </span>
+</div>
+<div class="absolute top-space-sm right-space-sm bg-secondary-container text-on-secondary-container font-label-md text-label-md px-space-sm py-1 rounded-full shadow-[1.5px_1.5px_0px_#211a16]">
+            ₹199
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Steamed Himalayan Chicken</h3>
+<div class="flex items-center text-primary" title="Spicy Dalle Chutney">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Authentic thin-skin hand-pinched momos filled with seasoned minced chicken, ginger, and scallions. Served with fiery Dalle red chutney and sesame dip.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary">8 Pcs • Bamboo Steamed</span>
+<button class="inline-flex items-center justify-center bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all shadow-[1.5px_1.5px_0px_#211a16] active:scale-95" onclick="addToCart('Steamed Himalayan Chicken Momos', 199, this)" type="button">
+              Add +
+            </button>
+</div>
+</div>
+</article>
+<!-- ITEM 3: Buttermilk Fried Tenders (IMG_4) -->
+<article class="menu-item-card flex flex-col bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm hover:shadow-md transition-all group" data-category="crispy-chicken" data-diet="non-veg" data-spicy="false">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img alt="Buttermilk Fried Tenders" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqbBVdMgq_RAnnhwfeUj1MAC0hmfe5z7r-rldbiDlOVuFCRa5LZqV3R4xleK6BjYQHaXgvVlrAcDhLLqPssRyDODcLtYnSp73CvINwlFp-2x93wMwCx9A4tNwhiYIRHUtk4fKTGG4-ZpH-KD6j4N2-Zl25b1WC1XP9mqwlzkvEb0hfvI1L6THe96wLeF8ln1Nqi5RoIiLmo8awrdwYgzgl0M5jE9zOJyWj3TwELgSqDh0N0zo4Qs6uZQ"/>
+<div class="absolute top-space-sm left-space-sm flex flex-col gap-1 items-start">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-space-sm py-0.5 rounded-full uppercase tracking-wider shadow-[1.5px_1.5px_0px_#211a16] rotate-[2deg]">
+              Golden Crunch
+            </span>
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-space-xs py-0.5 rounded-full shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span> Non-Veg
+            </span>
+</div>
+<div class="absolute top-space-sm right-space-sm bg-secondary-container text-on-secondary-container font-label-md text-label-md px-space-sm py-1 rounded-full shadow-[1.5px_1.5px_0px_#211a16]">
+            ₹249
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Buttermilk Fried Tenders</h3>
+<span class="font-label-sm text-label-sm text-tertiary">Mild Crunch</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              5 whole muscle chicken tenderloins brined in cultured buttermilk for 12 hours, double-dusted in secret spiced dredge. Served with house honey mustard.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary">5 Pcs • 2 Signature Dips</span>
+<button class="inline-flex items-center justify-center bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all shadow-[1.5px_1.5px_0px_#211a16] active:scale-95" onclick="addToCart('Buttermilk Fried Tenders', 249, this)" type="button">
+              Add +
+            </button>
+</div>
+</div>
+</article>
+<!-- ITEM 4: Truffle Mushroom Melt -->
+<article class="menu-item-card flex flex-col bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm hover:shadow-md transition-all group" data-category="burgers" data-diet="non-veg" data-spicy="false">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A decadent smash burger topped with sautéed wild portobello mushrooms, oozing melted Swiss Gruyere cheese, and fragrant black truffle garlic aioli nestled in a glossy toasted golden brioche bun. Rich food photography, warm overhead lighting, shallow depth of field, earth tones and rustic wood backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIZSpCidzWEWxRGWkBkYov5SCcvl9fT-bHK02pTL2HN5fYsiGNXt8bUi-mnFNqtw1uNNdPfB8AXbJSZEB40ZBNzFrK8hzL2K6E0Euyz3g42inyhLNxv6zoAYg9ceHHJh3n62JFuOfFIkEZarulHzQImpa6h8tecTsHQ6IMzp2g2WokNpFgKvRko6uMYi7238Krqz0z__YW2lCRcR3bPXd20rE4MdqEPyifjK33g_iSFnh3vJs4auckMg"/>
+<div class="absolute top-space-sm left-space-sm flex flex-col gap-1 items-start">
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-space-xs py-0.5 rounded-full shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span> Non-Veg
+            </span>
+</div>
+<div class="absolute top-space-sm right-space-sm bg-secondary-container text-on-secondary-container font-label-md text-label-md px-space-sm py-1 rounded-full shadow-[1.5px_1.5px_0px_#211a16]">
+            ₹329
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Truffle Mushroom Melt</h3>
+<span class="font-label-sm text-label-sm text-secondary">Gourmet Cut</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Smashed patty with crisp caramelized edges, genuine Swiss gruyère, butter-sautéed portobello mushrooms, and white truffle garlic aioli.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary">Single Smash 140g</span>
+<button class="inline-flex items-center justify-center bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all shadow-[1.5px_1.5px_0px_#211a16] active:scale-95" onclick="addToCart('Truffle Mushroom Melt', 329, this)" type="button">
+              Add +
+            </button>
+</div>
+</div>
+</article>
+<!-- ITEM 5: Crispy Paneer Makhani Smasher (VEG) -->
+<article class="menu-item-card flex flex-col bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm hover:shadow-md transition-all group" data-category="burgers" data-diet="veg" data-spicy="false">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A delicious vegetarian burger featuring a golden crispy panko-crusted fresh paneer patty glazed with rich buttery red makhani sauce, topped with shredded lettuce and cooling mint mayo on a toasted sesame brioche bun. Warm daylight food studio photography with warm cream and burnt orange accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSCBeMwM__7jwecS672DSrlnJ48QuxPrkodxWsptm5AnR0V7rhrAjGJFrZUqJbYybTZ0JFXplHAVvkAEkg3eRfWgVczq2H2L0usIFK2U1WpHL9DgXbxGnkmOK1nP0Z9nl74bMhkIdupr1JX0A1liIq0FaDCXUlw2E9VuIYm_cpjz8-aCGkxGDfITfukC11YeGzrwqA2JsYTYR4PWKdPNrVQMltrIcqeWr3wZR9rxJ5Z9FV9NynGlcYWQ"/>
+<div class="absolute top-space-sm left-space-sm flex flex-col gap-1 items-start">
+<span class="bg-[#238636] text-on-primary font-label-sm text-label-sm px-space-sm py-0.5 rounded-full uppercase tracking-wider shadow-[1.5px_1.5px_0px_#211a16]">
+              Veg Hero
+            </span>
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-space-xs py-0.5 rounded-full shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-[#238636]"></span> Veg
+            </span>
+</div>
+<div class="absolute top-space-sm right-space-sm bg-secondary-container text-on-secondary-container font-label-md text-label-md px-space-sm py-1 rounded-full shadow-[1.5px_1.5px_0px_#211a16]">
+            ₹229
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Crispy Paneer Makhani</h3>
+<span class="font-label-sm text-label-sm text-tertiary">Mild Heat</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Thick cutlet of malai cottage cheese spiced with fenugreek and paprika, panko fried, slow-cooked makhani glaze, and cooling coriander-mint emulsion.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary">100% Vegetarian</span>
+<button class="inline-flex items-center justify-center bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all shadow-[1.5px_1.5px_0px_#211a16] active:scale-95" onclick="addToCart('Crispy Paneer Makhani Smasher', 229, this)" type="button">
+              Add +
+            </button>
+</div>
+</div>
+</article>
+<!-- ITEM 6: Pan-Fried Kothey Momos -->
+<article class="menu-item-card flex flex-col bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm hover:shadow-md transition-all group" data-category="momos" data-diet="non-veg" data-spicy="false">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Traditional Tibetan pan-fried kothey chicken momos with golden brown crispy bottoms and delicate steamed tops garnished with chopped chives on a dark rustic ceramic plate accompanied by fiery tomato garlic dip and clear herbal broth. Close-up food photography with steam rising." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUsSGR1dYkixO750V6U4rD7d0H5VBBOQxBd6OGo1DclYregtRJlnil1JRSnpVSZVMCgZb7SnjLSIbDdsD8fjDq8dI4WNsigrLvvUVycSBKDUvL7r5GUx1YH4EhsrwMl-pLZVa4WFaNu5a7GaLBytLnCZvBM41lh5NuFR9QrTlWVTU6ZKJ4MkEhpa2yKr4Gvoz95M4pOgEw_JhJ6pL11wdPORB7_0AQHFrLmvmMZoOpoJCwplHPcXC3_A"/>
+<div class="absolute top-space-sm left-space-sm flex flex-col gap-1 items-start">
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-space-xs py-0.5 rounded-full shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span> Non-Veg
+            </span>
+</div>
+<div class="absolute top-space-sm right-space-sm bg-secondary-container text-on-secondary-container font-label-md text-label-md px-space-sm py-1 rounded-full shadow-[1.5px_1.5px_0px_#211a16]">
+            ₹219
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Pan-Fried Kothey Momos</h3>
+<span class="font-label-sm text-label-sm text-tertiary">Skillet Toasted</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Half steamed, half griddled to golden crisp perfection on the cast-iron flat top. Bursting with succulent ginger chicken filling.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary">6 Pcs • Crispy Skirt</span>
+<button class="inline-flex items-center justify-center bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all shadow-[1.5px_1.5px_0px_#211a16] active:scale-95" onclick="addToCart('Pan-Fried Kothey Momos', 219, this)" type="button">
+              Add +
+            </button>
+</div>
+</div>
+</article>
+<!-- ITEM 7: Corn & Cheese Steamed Momos (VEG) -->
+<article class="menu-item-card flex flex-col bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm hover:shadow-md transition-all group" data-category="momos" data-diet="veg" data-spicy="false">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Tender steamed vegetarian dumplings stuffed with sweet golden American corn kernels and melted stretchy mozzarella cheese garnished with spring onion greens inside a traditional bamboo steamer on a neutral linen cloth with creamy sesame mayo dip. Warm cozy restaurant setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnpmdJDn9SoGmkdbrixt6Jdf0iBlXIaQecazXhGo-A2SMfpwZ11GXMjDN1QpNZ_kYEyCRlLzQ_aieKlvKBrZTTsFIdmJpBRMvSIHD46_XlFhvbT46RiRnq4yFlccrTjOx29WJ4zd3kKjqvGfi3CfGGEoFFBR9ORfTucnJ_CYZr93RYb38hhZfuW2HyoFW2IFh313LlajgarvwG834qOmXLv08JxdWngsMMb3jVI9PC4NcbA5Za763vHQ"/>
+<div class="absolute top-space-sm left-space-sm flex flex-col gap-1 items-start">
+<span class="bg-[#238636] text-on-primary font-label-sm text-label-sm px-space-sm py-0.5 rounded-full uppercase tracking-wider shadow-[1.5px_1.5px_0px_#211a16]">
+              Cheese Pull
+            </span>
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-space-xs py-0.5 rounded-full shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-[#238636]"></span> Veg
+            </span>
+</div>
+<div class="absolute top-space-sm right-space-sm bg-secondary-container text-on-secondary-container font-label-md text-label-md px-space-sm py-1 rounded-full shadow-[1.5px_1.5px_0px_#211a16]">
+            ₹179
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Corn &amp; Cheese Momos</h3>
+<span class="font-label-sm text-label-sm text-secondary">Vegetarian</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Juicy sweet corn niblets blended with molten mozzarella and sharp cheddar, seasoned with crushed black pepper and green onions.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary">8 Pcs • Warm &amp; Melty</span>
+<button class="inline-flex items-center justify-center bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all shadow-[1.5px_1.5px_0px_#211a16] active:scale-95" onclick="addToCart('Corn &amp; Cheese Steamed Momos', 179, this)" type="button">
+              Add +
+            </button>
+</div>
+</div>
+</article>
+<!-- ITEM 8: Nashville Hot Wings -->
+<article class="menu-item-card flex flex-col bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm hover:shadow-md transition-all group" data-category="crispy-chicken" data-diet="non-veg" data-spicy="true">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Spicy Nashville hot fried chicken wings brushed with deep red cayenne chile and brown sugar butter sauce, topped with dill pickle slices on a sheet of parchment paper over a dark wooden table with cooling creamy ranch dipping sauce in a ramekin. Vivid crimson spice glaze and steam." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOxIy6Noo1PgGKXURMNd02CuXuTvGzgZ7hWX_b1ZkFNRWQZjHeWyOqfRNouygozuFiDJblmvoi9Osd84NxS9ZFNbn1q_YJnJltlo1tntk6NC8AiSurJZSUyTKW-xteLzRxxNHOfZDzxBBJ6fIzZzqHQPomJEZoCfoBhkCgknp1bWsF7gSA3Pl2SUGSl4sVeHQ_2MxUAbvlni7UEBqmuXtmhzuCtOJD0yJvutxtD8vAoyIb1Gvdu30jxw"/>
+<div class="absolute top-space-sm left-space-sm flex flex-col gap-1 items-start">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-space-sm py-0.5 rounded-full uppercase tracking-wider shadow-[1.5px_1.5px_0px_#211a16] rotate-[-2deg]">
+              High Heat
+            </span>
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-space-xs py-0.5 rounded-full shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span> Non-Veg
+            </span>
+</div>
+<div class="absolute top-space-sm right-space-sm bg-secondary-container text-on-secondary-container font-label-md text-label-md px-space-sm py-1 rounded-full shadow-[1.5px_1.5px_0px_#211a16]">
+            ₹269
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Nashville Hot Wings</h3>
+<div class="flex items-center text-primary" title="Extra Spicy">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              6 crispy jumbo wings tossed right out of the fryer in brown sugar and ghost pepper infused oil. Served with house bread &amp; butter pickles and cool ranch.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary">6 Pcs • Fiery Glaze</span>
+<button class="inline-flex items-center justify-center bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all shadow-[1.5px_1.5px_0px_#211a16] active:scale-95" onclick="addToCart('Nashville Hot Wings', 269, this)" type="button">
+              Add +
+            </button>
+</div>
+</div>
+</article>
+<!-- ITEM 9: Popcorn Chicken Bucket -->
+<article class="menu-item-card flex flex-col bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm hover:shadow-md transition-all group" data-category="crispy-chicken" data-diet="non-veg" data-spicy="false">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A paper street bucket overflowing with bite-sized crispy golden chicken popcorn pieces seasoned with smoked paprika and sea salt, served with garlic herb aioli and chili dip bowls on an earthy wooden counter. Warm high key appetizing food photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs51TOEHHa9SXUdlfc4uIC-Hlx0MH_VPys7TC8KWmxeI3fF3ddu2pMy9bOZ4wjVE20lP8ypRRT87NKEPNoPN_YvcAx76yAC7F-w8o1BYGqCOGX2vZEkJ_XL1o_c68I8EMLF9HEl6NiyfBEVMnETsql0SiIIzlN6hVvTHFvEL9YaAAFJpehB1lGpeDkAIr-EF-l583ubF0LBGrliRbuXoTRMj91XJI_OwwkBkzN1Kws2GXzdiLKRlgXow"/>
+<div class="absolute top-space-sm left-space-sm flex flex-col gap-1 items-start">
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-space-xs py-0.5 rounded-full shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span> Non-Veg
+            </span>
+</div>
+<div class="absolute top-space-sm right-space-sm bg-secondary-container text-on-secondary-container font-label-md text-label-md px-space-sm py-1 rounded-full shadow-[1.5px_1.5px_0px_#211a16]">
+            ₹189
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Popcorn Chicken Bucket</h3>
+<span class="font-label-sm text-label-sm text-tertiary">Snack Pack</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Bite-sized chicken thigh nuggets battered with 11-spice batter and flash fried till shattering crisp. Perfect for desk study or street strolls.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary">220g Bucket • Ranch Dip</span>
+<button class="inline-flex items-center justify-center bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all shadow-[1.5px_1.5px_0px_#211a16] active:scale-95" onclick="addToCart('Popcorn Chicken Bucket', 189, this)" type="button">
+              Add +
+            </button>
+</div>
+</div>
+</article>
+<!-- ITEM 10: Peri Peri Masala Crinkle Fries (SIDES) -->
+<article class="menu-item-card flex flex-col bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm hover:shadow-md transition-all group" data-category="sides" data-diet="veg" data-spicy="true">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Hot golden crinkle-cut french fries tossed generously in red peri peri seasoning masala powder, served in a kraft paper cone with cheesy jalapeno dip on the side on a warm wooden picnic table. Macro food shot highlighting the crunchy texture and spice crystals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATH3BQEjPEDnRR6bkJqZ1mA7_mD2H2PHM2ptv3pvtyTu8OLHaSdtQSk9wr3FGdg_Elk-NrJlSOd10O5Efbl0rtcRZBBb0yDMT7olGTvx616PtxUE8DeVxD8zH-6dFdHmWmI8v4ZRD6Do8sUArKMSzmqAd_PxEDbQcz7JTZtPWlC9ynGkxB1ib3cGz263dV6fm94BpnPsG6p3-5JrXsPSEFmNkaiBrX15jfEUr55qC5-ty45zS1hezIlQ"/>
+<div class="absolute top-space-sm left-space-sm flex flex-col gap-1 items-start">
+<span class="bg-[#238636] text-on-primary font-label-sm text-label-sm px-space-sm py-0.5 rounded-full uppercase tracking-wider shadow-[1.5px_1.5px_0px_#211a16]">
+              Veg Side
+            </span>
+</div>
+<div class="absolute top-space-sm right-space-sm bg-secondary-container text-on-secondary-container font-label-md text-label-md px-space-sm py-1 rounded-full shadow-[1.5px_1.5px_0px_#211a16]">
+            ₹129
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Peri Peri Crinkle Fries</h3>
+<div class="flex items-center text-primary" title="Spicy">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Crisp Belgian-style crinkle potatoes fried to order and shaken in our house peri-peri bird's eye chili seasoning blend.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary">Includes Dip</span>
+<button class="inline-flex items-center justify-center bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all shadow-[1.5px_1.5px_0px_#211a16] active:scale-95" onclick="addToCart('Peri Peri Crinkle Fries', 129, this)" type="button">
+              Add +
+            </button>
+</div>
+</div>
+</article>
+<!-- ITEM 11: House Salted Caramel Craft Shake (BEVERAGES) -->
+<article class="menu-item-card flex flex-col bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm hover:shadow-md transition-all group" data-category="beverages" data-diet="veg" data-spicy="false">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A tall thick milkshake in an old-fashioned soda glass dripping with rich golden caramel sauce, topped with swirls of fresh whipped cream and crushed butter cookie crumbs. Shot against a warm cream backdrop with vintage diner feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8Is8hptww4K9Vn88SF3nHxNm9Cc01OmB6uLwSnFObW5uWevy3jwdWsVXTwZKz2Yz0KnZa44p0hWnefr_luAvlj_ehvxkTbfifYItViV0SgXvwWSeX4EJRMxo0UL9eTaEhZMqBgDUqFpIXrs8m7jA9r_OleqFmppuJ8boAofrtuyxhQjO87535rx_aAL3tL4tfyCyNNfpMUYnCUz8BY7MK3AvJyH3X-EoscHz4yfkZZe9EcFsUlx54rA"/>
+<div class="absolute top-space-sm left-space-sm flex flex-col gap-1 items-start">
+<span class="bg-[#238636] text-on-primary font-label-sm text-label-sm px-space-sm py-0.5 rounded-full uppercase tracking-wider shadow-[1.5px_1.5px_0px_#211a16]">
+              Veg Shake
+            </span>
+</div>
+<div class="absolute top-space-sm right-space-sm bg-secondary-container text-on-secondary-container font-label-md text-label-md px-space-sm py-1 rounded-full shadow-[1.5px_1.5px_0px_#211a16]">
+            ₹169
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Salted Caramel Shake</h3>
+<span class="font-label-sm text-label-sm text-secondary">Thick Craft</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Slow-churned dairy vanilla bean ice cream spun thick with house-cooked sea salt butterscotch caramel and malted milk.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary">350ml Hand-Spun</span>
+<button class="inline-flex items-center justify-center bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all shadow-[1.5px_1.5px_0px_#211a16] active:scale-95" onclick="addToCart('Salted Caramel Shake', 169, this)" type="button">
+              Add +
+            </button>
+</div>
+</div>
+</article>
+<!-- ITEM 12: Varsity Dips Trio (SIDES) -->
+<article class="menu-item-card flex flex-col bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm hover:shadow-md transition-all group" data-category="sides" data-diet="veg" data-spicy="true">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Three small ceramic bowls holding different sauces: fiery red dalle chili chutney, golden honey mustard, and creamy garlic smoked aioli arranged neatly on a wooden board. Clean editorial culinary shot, warm light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCva-y9qA9pDobFvSCZFk5Dk0y7gipMDgJSHIRrfXlVxOlaGjOAWJPkhg2r4zOMTljCiCiehB4TDy9Zsw9YvG4_67V3angH3G1IMG8bLJYZEAtIPYHYNBEQZuuMk7_pXu1YB0LweRvkhsrQHyC6m1lsuMHwv7YKwbcdX_e3707qhb_vxQGwUe86LHHsdgXGNE6I-OfG8-E9FfBLvDJVEfBhheJZOvgOUBil26raPsDEUzS-E-XgWtXNAQ"/>
+<div class="absolute top-space-sm left-space-sm flex flex-col gap-1 items-start">
+<span class="bg-[#238636] text-on-primary font-label-sm text-label-sm px-space-sm py-0.5 rounded-full uppercase tracking-wider shadow-[1.5px_1.5px_0px_#211a16]">
+              Veg Dip
+            </span>
+</div>
+<div class="absolute top-space-sm right-space-sm bg-secondary-container text-on-secondary-container font-label-md text-label-md px-space-sm py-1 rounded-full shadow-[1.5px_1.5px_0px_#211a16]">
+            ₹79
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Varsity Dips Trio</h3>
+<span class="font-label-sm text-label-sm text-tertiary">House Blends</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Three essential condiments: Darjeeling Fiery Dalle Chutney, Golden Honey Dijon, and Signature Smoked Garlic Mayo.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary">3 x 40ml Tubs</span>
+<button class="inline-flex items-center justify-center bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all shadow-[1.5px_1.5px_0px_#211a16] active:scale-95" onclick="addToCart('Varsity Dips Trio', 79, this)" type="button">
+              Add +
+            </button>
+</div>
+</div>
+</article>
+</div>
+<!-- Zero State Filter Fallback -->
+<div class="hidden flex-col items-center justify-center py-space-xl text-center gap-space-sm" id="zero-state">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[32px]">restaurant_menu</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">No Items Found</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">No items match your selected dietary criteria in this category. Try switching filters to explore the rest of the curriculum.</p>
+<button class="mt-space-xs bg-primary text-on-primary px-space-md py-space-xs rounded-full font-label-md text-label-md" onclick="filterMenu('diet', 'all', document.querySelectorAll('.diet-btn')[0])" type="button">
+        Reset Filters
+      </button>
+</div>
+<!-- Kitchen Standards / Editorial Bento -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mt-space-lg">
+<div class="bg-surface-container-low p-space-md rounded-DEFAULT flex flex-col gap-space-xs">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-space-xs">
+<span class="material-symbols-outlined text-[20px]">skillet</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">The 450° Iron Smash</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">We press whole cuts onto scalding flat tops to trigger maximum Maillard reaction, forming that signature paper-thin crispy lace.</p>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-DEFAULT flex flex-col gap-space-xs">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center mb-space-xs">
+<span class="material-symbols-outlined text-[20px]">soup_kitchen</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Darjeeling Dalle Heat</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Our momo chili pastes use authentic Dalle Khursani fire chillies from the eastern hills, stewed with mustard oil and toasted garlic.</p>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-DEFAULT flex flex-col gap-space-xs">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center mb-space-xs">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Raniganj Express</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Freshly packed in vented steam-lock kraft boxes for hot, crispy delivery across NSB Road, School More, and Raniganj town limits.</p>
+</div>
+</div>
+</section>
+<!-- Floating Quick-Order Cart summary pill drawer -->
+<aside class="fixed bottom-6 right-6 lg:right-12 z-40 transition-all duration-300 transform translate-y-32 opacity-0 pointer-events-none" id="cart-floating-drawer">
+<div class="bg-inverse-surface text-inverse-on-surface rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.25)] p-2 pl-space-md pr-2 flex items-center gap-space-md border-0">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-surface leading-none" id="cart-floating-count">0 items</span>
+<span class="font-headline-sm text-headline-sm text-secondary-fixed-dim leading-none" id="cart-floating-total">₹0</span>
+</div>
+</div>
+<a class="bg-secondary-container text-on-secondary-container hover:bg-secondary-fixed px-space-md py-space-xs rounded-full font-label-md text-label-md uppercase tracking-wider transition-all shadow-[1.5px_1.5px_0px_#211a16] flex items-center gap-1" href="menu.html">
+<span>Review Order</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</aside>
+</div></main><div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-surface/95 backdrop-blur-xl p-space-sm px-margin-mobile flex items-center gap-space-sm shadow-[0_-2px_10px_rgba(0,0,0,0.06)]"><a class="flex-1 inline-flex items-center justify-center bg-secondary-container text-on-secondary-container hover:bg-secondary-fixed hover:text-on-secondary-fixed py-space-sm px-space-md rounded-full font-label-md text-label-md text-center shadow-[1.5px_1.5px_0px_#211a16]" href="book-a-table.html">Book Table</a><a class="flex-1 inline-flex items-center justify-center bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container py-space-sm px-space-md rounded-full font-label-md text-label-md text-center shadow-[1.5px_1.5px_0px_#211a16]" href="menu.html">Order Now</a></div><footer class="w-full bg-inverse-surface text-inverse-on-surface mt-space-xl pt-space-xl pb-space-lg"><div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-lg"><div class="lg:col-span-4 flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><span class="font-headline-md text-headline-md text-inverse-on-surface">Burger University</span></div><p class="font-body-md text-body-md text-surface-variant max-w-sm">Street Food Crafted with Soul. Obsessive cuts, signature sauce craft, and griddled brioche excellence.</p><div class="flex items-center gap-space-sm mt-space-xs"><a aria-label="Instagram" class="w-10 h-10 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary hover:bg-secondary-container hover:text-on-secondary-container transition-all" href="#"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a><a aria-label="Reviews" class="w-10 h-10 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary hover:bg-secondary-container hover:text-on-secondary-container transition-all" href="#"><span class="material-symbols-outlined text-[20px]">star</span></a><a aria-label="Location" class="w-10 h-10 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary hover:bg-secondary-container hover:text-on-secondary-container transition-all" href="#"><span class="material-symbols-outlined text-[20px]">pin_drop</span></a><a aria-label="Contact Email" class="w-10 h-10 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary hover:bg-secondary-container hover:text-on-secondary-container transition-all" href="#"><span class="material-symbols-outlined text-[20px]">mail</span></a></div></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><div class="font-label-md text-label-md uppercase tracking-wider text-secondary-fixed-dim">Quick Links</div><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-variant"><li><a class="hover:text-inverse-on-surface transition-colors" href="index.html">Home</a></li><li><a class="hover:text-inverse-on-surface transition-colors" href="menu.html">Menu &amp; Combos</a></li><li><a class="hover:text-inverse-on-surface transition-colors" href="book-a-table.html">Book a Table</a></li><li><a class="hover:text-inverse-on-surface transition-colors" href="about.html">About Us</a></li><li><a class="hover:text-inverse-on-surface transition-colors" href="contact.html">Contact</a></li></ul></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><div class="font-label-md text-label-md uppercase tracking-wider text-secondary-fixed-dim">Location &amp; Hours</div><div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-variant"><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-secondary-fixed-dim shrink-0">schedule</span><span>Mon-Sun: 11:00 AM - 11:00 PM</span></div><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-secondary-fixed-dim shrink-0">location_on</span><span>NSB Road, Raniganj, West Bengal 713347</span></div><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-secondary-fixed-dim shrink-0">call</span><span>+91 98321 45678</span></div></div></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><div class="font-label-md text-label-md uppercase tracking-wider text-secondary-fixed-dim">Fresh Drops &amp; Specials</div><p class="font-body-sm text-body-sm text-surface-variant">Get secret drop notifications and seasonal burger recipes directly to your inbox.</p><form class="flex flex-col sm:flex-row gap-space-xs mt-space-xs" onsubmit="return false;"><input class="bg-surface-container-low text-on-surface rounded-full px-space-md py-space-sm font-body-sm text-body-sm outline-none focus:ring-2 focus:ring-primary w-full" placeholder="Enter your email" type="email"/><button class="bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-space-md py-space-sm rounded-full font-label-md text-label-md transition-colors shrink-0" type="submit">Join</button></form></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-outline-variant"><p>© 2025 Burger University. Street Food Crafted with Soul. All rights reserved.</p><div class="flex items-center gap-space-md"><a class="hover:text-inverse-on-surface transition-colors" href="#">Privacy Policy</a><a class="hover:text-inverse-on-surface transition-colors" href="#">Terms of Service</a><a class="hover:text-inverse-on-surface transition-colors" href="#">Nutritional Information</a></div></div></div></footer></body></html>

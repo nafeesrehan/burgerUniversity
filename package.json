@@ -1,0 +1,21 @@
+{
+  "name": "burger-university",
+  "version": "1.0.0",
+  "description": "Burger University - Interactive 225-Frame Scrollytelling & Restaurant Website",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "echo 'Build complete'"
+  },
+  "keywords": [
+    "scrollytelling",
+    "canvas",
+    "animation",
+    "burger-university",
+    "restaurant",
+    "vercel"
+  ],
+  "author": "Burger University",
+  "license": "ISC"
+}
