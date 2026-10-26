@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Staff Login - Burger University Admin</title>
+  <meta name="description" content="Secure staff and manager portal for Burger University kitchen operations, reservations, and menu management."/>
+  
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#b32514",
+            "primary-hover": "#910a00",
+            "secondary-container": "#ffbe47",
+            "bg-dark": "#181310",
+            "surface-dark": "#241c17",
+            "border-dark": "#3d312a"
+          },
+          fontFamily: {
+            "headline": ["Newsreader", "serif"],
+            "mono": ["Space Mono", "monospace"],
+            "body": ["DM Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-bg-dark text-[#f8ede6] font-body min-h-screen flex flex-col justify-between selection:bg-secondary-container selection:text-[#181310]">
+
+  <!-- Top bar -->
+  <header class="border-b border-border-dark bg-[#1f1713]/80 backdrop-blur-md px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-white shadow-[2px_2px_0px_#ffbe47]">
+        <span class="material-symbols-outlined text-[20px]">local_fire_department</span>
+      </div>
+      <div>
+        <span class="font-headline font-bold text-lg text-white">Burger University</span>
+        <span class="text-[11px] font-mono text-[#b8a69d] block -mt-1">Raniganj, West Bengal • Terminal Gate</span>
+      </div>
+    </div>
+    <a href="index.html" class="text-xs font-mono text-[#b8a69d] hover:text-[#ffbe47] transition-colors flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#2a201a] border border-border-dark">
+      <span class="material-symbols-outlined text-[15px]">arrow_back</span>
+      <span>Public Website</span>
+    </a>
+  </header>
+
+  <!-- Login Card Center -->
+  <main class="flex-1 flex items-center justify-center p-4 sm:p-6">
+    <div class="w-full max-w-md bg-surface-dark border border-border-dark rounded-3xl p-7 sm:p-9 shadow-2xl relative overflow-hidden">
+      <!-- Glow ambient background -->
+      <div class="absolute -top-24 -right-24 w-48 h-48 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-[#ffbe47]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10 flex flex-col gap-6">
+        <!-- Brand Header -->
+        <div class="text-center">
+          <div class="w-14 h-14 rounded-2xl bg-primary/15 border border-primary/30 mx-auto flex items-center justify-center text-primary mb-3 shadow-[2px_2px_0px_#000]">
+            <span class="material-symbols-outlined text-[30px]">admin_panel_settings</span>
+          </div>
+          <h1 class="font-headline text-3xl font-bold text-white tracking-tight">Staff Authentication</h1>
+          <p class="text-xs text-[#b8a69d] font-mono mt-1">Requires an authorized Supabase Admin account</p>
+        </div>
+
+        <!-- URL Alert Notification Banner -->
+        <div id="status-banner" class="hidden rounded-xl p-3.5 text-xs font-mono border flex items-start gap-2.5">
+          <span id="banner-icon" class="material-symbols-outlined text-[18px] shrink-0 mt-0.5"></span>
+          <span id="banner-text" class="flex-1 leading-relaxed"></span>
+        </div>
+
+        <!-- Login Form -->
+        <form id="login-form" onsubmit="handleLogin(event)" class="flex flex-col gap-4">
+          <div class="flex flex-col gap-1.5">
+            <label for="admin-email" class="text-xs font-mono text-[#b8a69d] uppercase tracking-wider flex items-center justify-between">
+              <span>Admin Email</span>
+              <span class="text-[10px] text-[#786960]">name@domain.com</span>
+            </label>
+            <div class="relative">
+              <span class="material-symbols-outlined text-[#786960] absolute left-3.5 top-1/2 -translate-y-1/2 text-[18px]">mail</span>
+              <input 
+                id="admin-email" 
+                type="email" 
+                required 
+                autocomplete="email" 
+                placeholder="admin@burgeruniversity.in" 
+                class="w-full bg-[#181310] border border-border-dark rounded-xl pl-10 pr-4 py-3 text-sm text-white placeholder-[#5a4840] outline-none focus:border-[#ffbe47] transition-all font-mono"
+              />
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label for="admin-password" class="text-xs font-mono text-[#b8a69d] uppercase tracking-wider flex items-center justify-between">
+              <span>Password</span>
+              <span class="text-[10px] text-[#786960]">Supabase Auth</span>
+            </label>
+            <div class="relative">
+              <span class="material-symbols-outlined text-[#786960] absolute left-3.5 top-1/2 -translate-y-1/2 text-[18px]">lock</span>
+              <input 
+                id="admin-password" 
+                type="password" 
+                required 
+                autocomplete="current-password" 
+                placeholder="••••••••••••" 
+                class="w-full bg-[#181310] border border-border-dark rounded-xl pl-10 pr-11 py-3 text-sm text-white placeholder-[#5a4840] outline-none focus:border-[#ffbe47] transition-all font-mono"
+              />
+              <button 
+                type="button" 
+                onclick="togglePasswordVisibility()" 
+                class="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#786960] hover:text-white transition-colors"
+                title="Toggle password visibility"
+              >
+                <span id="eye-icon" class="material-symbols-outlined text-[18px]">visibility</span>
+              </button>
+            </div>
+          </div>
+
+          <button 
+            id="login-btn" 
+            type="submit" 
+            class="mt-2 w-full bg-primary hover:bg-[#d63f2a] active:scale-[0.99] text-white py-3.5 rounded-xl font-mono text-xs uppercase tracking-wider font-bold transition-all shadow-[2px_2px_0px_#000000] flex items-center justify-center gap-2"
+          >
+            <span id="login-btn-text">Authenticate & Open Admin</span>
+            <span id="login-spinner" class="material-symbols-outlined text-[18px] hidden animate-spin">progress_activity</span>
+          </button>
+        </form>
+
+        <!-- Security Note -->
+        <div class="bg-[#181310]/60 border border-border-dark/60 rounded-xl p-3.5 text-[11px] font-mono text-[#8e7b72] flex items-start gap-2">
+          <span class="material-symbols-outlined text-[16px] text-[#ffbe47] shrink-0 mt-0.5">verified_user</span>
+          <span>Access is strictly restricted to authenticated staff with <code class="text-[#ffbe47] font-bold">profiles.role = 'admin'</code>. Public visitors cannot view bookings or customer records.</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-border-dark bg-[#1f1713]/80 py-4 text-center text-xs font-mono text-[#786960]">
+    Burger University Admin Gate • Protected by Supabase Row-Level Security
+  </footer>
+
+  <!-- Supabase JS & Admin Auth Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="admin-auth.js"></script>
+  <script>
+    // Password toggle
+    function togglePasswordVisibility() {
+      const input = document.getElementById('admin-password');
+      const icon = document.getElementById('eye-icon');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.textContent = 'visibility_off';
+      } else {
+        input.type = 'password';
+        icon.textContent = 'visibility';
+      }
+    }
+
+    // Show banner message
+    function showBanner(message, type = 'error') {
+      const banner = document.getElementById('status-banner');
+      const text = document.getElementById('banner-text');
+      const icon = document.getElementById('banner-icon');
+
+      banner.className = 'rounded-xl p-3.5 text-xs font-mono border flex items-start gap-2.5';
+      if (type === 'error') {
+        banner.classList.add('bg-rose-500/10', 'border-rose-500/30', 'text-rose-300');
+        icon.textContent = 'error';
+      } else if (type === 'warning') {
+        banner.classList.add('bg-amber-500/10', 'border-amber-500/30', 'text-amber-300');
+        icon.textContent = 'warning';
+      } else {
+        banner.classList.add('bg-emerald-500/10', 'border-emerald-500/30', 'text-emerald-300');
+        icon.textContent = 'check_circle';
+      }
+
+      text.textContent = message;
+      banner.classList.remove('hidden');
+    }
+
+    // Check URL parameters for status notices
+    document.addEventListener('DOMContentLoaded', async () => {
+      const params = new URLSearchParams(window.location.search);
+      const err = params.get('error');
+
+      if (err === 'session_required') {
+        showBanner('Admin session required. Please sign in to access the control terminal.', 'warning');
+      } else if (err === 'unauthorized_role') {
+        showBanner('Access Denied: Your account does not have "admin" privileges in the profiles table.', 'error');
+      } else if (err === 'session_expired') {
+        showBanner('Your session has expired. Please sign in again to continue.', 'warning');
+      }
+
+      // If user already logged in as admin, auto-redirect to admin.html
+      try {
+        const profile = await window.AdminAuth.getCurrentAdminProfile();
+        if (profile && profile.role === 'admin') {
+          showBanner('Active admin session detected. Redirecting to terminal...', 'success');
+          setTimeout(() => {
+            window.location.replace('admin.html');
+          }, 600);
+        }
+      } catch (e) {
+        console.log('[Login] No pre-existing admin session.');
+      }
+    });
+
+    async function handleLogin(e) {
+      e.preventDefault();
+      const email = document.getElementById('admin-email').value.trim();
+      const password = document.getElementById('admin-password').value;
+
+      const btn = document.getElementById('login-btn');
+      const btnText = document.getElementById('login-btn-text');
+      const spinner = document.getElementById('login-spinner');
+
+      try {
+        btn.disabled = true;
+        btnText.textContent = 'Verifying Credentials & Role...';
+        spinner.classList.remove('hidden');
+
+        await window.AdminAuth.login(email, password);
+
+        showBanner('Authenticated successfully as Admin! Launching terminal...', 'success');
+        setTimeout(() => {
+          window.location.replace('admin.html');
+        }, 500);
+      } catch (err) {
+        console.error('[Login Error]', err);
+        showBanner(err.message || 'Invalid email or password.', 'error');
+      } finally {
+        btn.disabled = false;
+        btnText.textContent = 'Authenticate & Open Admin';
+        spinner.classList.add('hidden');
+      }
+    }
+  </script>
+</body>
+</html>

@@ -4,6 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Burger University | The Best Burger in Town</title>
+  <meta name="description" content="Burger University - Street food crafted with soul in Raniganj. Smashed craft burgers, authentic Himalayan momos, loaded sides, and thick milkshakes."/>
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -202,6 +203,33 @@
 
     </div>
   </header>
+
+  <!-- DYNAMIC ACTIVE OFFERS BANNER -->
+  <aside id="homepage-offer-banner" class="hidden fixed top-20 left-0 right-0 z-40 bg-[#211a16] text-[#f8ede6] border-b border-[#ffbe47]/40 shadow-2xl transition-all duration-300">
+    <div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin py-2.5 flex items-center justify-between gap-space-sm text-xs font-mono">
+      <div class="flex items-center gap-3 overflow-hidden">
+        <span class="w-2 h-2 rounded-full bg-[#ffbe47] animate-ping shrink-0"></span>
+        <span id="offer-banner-badge" class="bg-primary text-white text-[10px] uppercase font-bold px-2 py-0.5 rounded-full shrink-0 shadow-[1px_1px_0px_#ffbe47]">HOT DEAL</span>
+        <div class="truncate flex items-center gap-2">
+          <strong id="offer-banner-title" class="text-white font-headline text-sm tracking-wide">Special Offer</strong>
+          <span class="text-[#786960] hidden sm:inline">•</span>
+          <span id="offer-banner-desc" class="text-[#b8a69d] hidden sm:inline truncate">Offer details</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 shrink-0">
+        <span id="offer-banner-code-pill" class="hidden md:inline-flex items-center gap-1 bg-[#2d231d] border border-[#ffbe47]/30 text-[#ffbe47] px-2 py-0.5 rounded text-[10px]">
+          Code: <strong id="offer-banner-code"></strong>
+        </span>
+        <a id="offer-banner-cta" href="menu.html" class="bg-[#ffbe47] hover:bg-[#ffd27a] text-[#211a16] font-bold px-3 py-1 rounded-full text-[11px] uppercase tracking-wider transition-all shadow-[1.5px_1.5px_0px_#000]">
+          Order Now
+        </a>
+        <button onclick="document.getElementById('homepage-offer-banner').classList.add('hidden')" class="text-[#b8a69d] hover:text-white p-1 rounded-full transition-colors" title="Dismiss offer banner">
+          <span class="material-symbols-outlined text-[16px]">close</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
 
   <!-- MOBILE NAVIGATION DRAWER -->
   <div class="hidden fixed inset-0 z-50 bg-inverse-surface text-inverse-on-surface flex-col justify-between p-margin-mobile sm:p-margin" id="mobile-drawer">
@@ -740,5 +768,51 @@
   </main>
 
   <script src="app.js"></script>
+  <script src="supabase-client.js"></script>
+  <script>
+    // Fetch and display active offers (is_active = true and current time between starts_at and ends_at)
+    async function checkHomepageActiveOffers() {
+      if (!window.BurgerBackend || typeof window.BurgerBackend.getActiveOffers !== 'function') return;
+      try {
+        const offers = await window.BurgerBackend.getActiveOffers();
+        if (offers && offers.length > 0) {
+          const offer = offers[0];
+          const banner = document.getElementById('homepage-offer-banner');
+          if (!banner) return;
+
+          const badgeEl = document.getElementById('offer-banner-badge');
+          const titleEl = document.getElementById('offer-banner-title');
+          const descEl = document.getElementById('offer-banner-desc');
+          const codeEl = document.getElementById('offer-banner-code');
+          const codePill = document.getElementById('offer-banner-code-pill');
+          const ctaBtn = document.getElementById('offer-banner-cta');
+
+          if (badgeEl) badgeEl.textContent = offer.badge_text || 'HOT DEAL';
+          if (titleEl) titleEl.textContent = offer.title;
+          if (descEl) descEl.textContent = offer.description;
+          
+          if (offer.discount_code && codeEl && codePill) {
+            codeEl.textContent = offer.discount_code;
+            codePill.classList.remove('hidden');
+          }
+
+          if (offer.cta_text && ctaBtn) {
+            ctaBtn.textContent = offer.cta_text;
+          }
+          if (offer.cta_url && ctaBtn) {
+            ctaBtn.href = offer.cta_url;
+          }
+
+          banner.classList.remove('hidden');
+        }
+      } catch (err) {
+        console.warn('[Offer Banner Note]', err);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      checkHomepageActiveOffers();
+    });
+  </script>
 </body>
 </html>

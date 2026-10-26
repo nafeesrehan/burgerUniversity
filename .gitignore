@@ -1,9 +1,23 @@
 node_modules/
 .DS_Store
+*.log
+
+# Secrets (never push these)
+.env
+.env.*
+!.env.example
+
+# Build output and local tooling
+dist/
+build/
+.vercel/
+.vscode/
+
+# Working files
+scratch/
 stitch_website/
 scratch_sections.html
 extracted_sections_utf8.html
 build-index.mjs
 fix-supporting-pages.mjs
 setup-git.mjs
-*.log

@@ -30,16 +30,37 @@ const server = http.createServer((req, res) => {
   res.setHeader('X-Content-Type-Options', 'nosniff');
 
   let cleanUrl = req.url.split('?')[0];
+  if (req.method === 'GET' && cleanUrl === '/api/turnstile-config') {
+    const siteKey = process.env.TURNSTILE_SITE_KEY;
+    res.writeHead(siteKey ? 200 : 503, {
+      'Content-Type': 'application/json',
+      'Cache-Control': 'no-store'
+    });
+    res.end(JSON.stringify(siteKey
+      ? { siteKey }
+      : { error: 'TURNSTILE_SITE_KEY is not configured' }));
+    return;
+  }
+
+
   if (cleanUrl === '/' || cleanUrl === '') {
     cleanUrl = '/index.html';
   }
 
   // Safe file path resolution
-  const safePath = path.normalize(path.join(__dirname, cleanUrl));
+  let safePath = path.normalize(path.join(__dirname, cleanUrl));
   if (!safePath.startsWith(__dirname)) {
     res.writeHead(403, { 'Content-Type': 'text/plain' });
     res.end('Forbidden');
     return;
+  }
+
+  // If path doesn't exist and has no extension, check if appending .html works
+  if (!fs.existsSync(safePath) && !path.extname(safePath)) {
+    const htmlCandidate = safePath + '.html';
+    if (fs.existsSync(htmlCandidate)) {
+      safePath = htmlCandidate;
+    }
   }
 
   fs.stat(safePath, (err, stats) => {
