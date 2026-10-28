@@ -1,8 +1,7 @@
 # Prevent local development server from being deployed as a serverless function
 server.js
 
-# Internal checks and migration scripts
-scripts/
+# Database migration scripts
 *.sql
 
 # Secrets and local environment files
