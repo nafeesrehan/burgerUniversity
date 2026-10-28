@@ -269,6 +269,8 @@
     }
   };
 
-  window.AdminStorage = AdminStorage;
+  if (typeof window !== 'undefined') {
+    window.AdminStorage = AdminStorage;
+  }
 
-})(window);
+})(typeof window !== 'undefined' ? window : globalThis);

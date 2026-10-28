@@ -5,7 +5,7 @@ export default function handler(request, response) {
     return;
   }
 
-  const siteKey = "0x4AAAAAAFmVNwzvuJRACzu8";
+  const siteKey = process.env.TURNSTILE_SITE_KEY || "0x4AAAAAAFmVNwzvuJRACzu8";
   response.setHeader('Cache-Control', 'no-store');
 
   if (!siteKey) {

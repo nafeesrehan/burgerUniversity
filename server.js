@@ -31,7 +31,7 @@ const server = http.createServer((req, res) => {
 
   let cleanUrl = req.url.split('?')[0];
   if (req.method === 'GET' && cleanUrl === '/api/turnstile-config') {
-    const siteKey = process.env.TURNSTILE_SITE_KEY;
+    const siteKey = process.env.TURNSTILE_SITE_KEY || "0x4AAAAAAFmVNwzvuJRACzu8";
     res.writeHead(siteKey ? 200 : 503, {
       'Content-Type': 'application/json',
       'Cache-Control': 'no-store'
@@ -45,6 +45,8 @@ const server = http.createServer((req, res) => {
 
   if (cleanUrl === '/' || cleanUrl === '') {
     cleanUrl = '/index.html';
+  } else if (cleanUrl === '/app.js') {
+    cleanUrl = '/scrollytelling.js';
   }
 
   // Safe file path resolution

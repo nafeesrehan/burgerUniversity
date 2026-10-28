@@ -6,7 +6,7 @@
 
 const AdminApi = {
   get client() {
-    return window.AdminAuth ? window.AdminAuth.client : null;
+    return (typeof window !== 'undefined' && window.AdminAuth) ? window.AdminAuth.client : null;
   },
 
   // -----------------------------------------------------------------
@@ -669,6 +669,8 @@ const AdminApi = {
   }
 };
 
-window.AdminApi = AdminApi;
-window.AdminAPI = AdminApi;
+if (typeof window !== 'undefined') {
+  window.AdminApi = AdminApi;
+  window.AdminAPI = AdminApi;
+}
 

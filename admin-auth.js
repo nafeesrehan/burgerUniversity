@@ -8,17 +8,19 @@ const SUPABASE_PROJECT_URL = 'https://wiriaujhlrjcpjfmtean.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndpcmlhdWpobHJqY3BqZm10ZWFuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI5NDg5MzYsImV4cCI6MjEwODUyNDkzNn0.0C9YLCPtQ-qb0c_B15Wzlgior73vN5lVk1ROkjvg-Sk';
 
 // Initialize Supabase Client
-if (!window.supabase || !window.supabase.createClient) {
+if (typeof window !== 'undefined' && (!window.supabase || !window.supabase.createClient)) {
   console.error('[AdminAuth] Supabase JS library not loaded. Make sure @supabase/supabase-js CDN is included.');
 }
 
-const supabaseClient = window.supabase.createClient(SUPABASE_PROJECT_URL, SUPABASE_ANON_KEY, {
-  auth: {
-    persistSession: true,
-    autoRefreshToken: true,
-    detectSessionInUrl: true
-  }
-});
+const supabaseClient = (typeof window !== 'undefined' && window.supabase && window.supabase.createClient)
+  ? window.supabase.createClient(SUPABASE_PROJECT_URL, SUPABASE_ANON_KEY, {
+      auth: {
+        persistSession: true,
+        autoRefreshToken: true,
+        detectSessionInUrl: true
+      }
+    })
+  : null;
 
 const AdminAuth = {
   client: supabaseClient,
@@ -159,4 +161,6 @@ const AdminAuth = {
   }
 };
 
-window.AdminAuth = AdminAuth;
+if (typeof window !== 'undefined') {
+  window.AdminAuth = AdminAuth;
+}

@@ -1,6 +1,12 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/app.js",
+      "destination": "/scrollytelling.js"
+    }
+  ],
   "headers": [
     {
       "source": "/frames/(.*)",

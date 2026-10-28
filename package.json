@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Burger University - Interactive 225-Frame Scrollytelling & Restaurant Website",
   "type": "module",
-  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "check": "node scripts/pre-publish-check.cjs",

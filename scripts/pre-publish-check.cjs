@@ -21,7 +21,8 @@ const filesToCheck = [
   'login.html',
   'supabase-client.js',
   'admin-auth.js',
-  'admin-api.js'
+  'admin-api.js',
+  'scrollytelling.js'
 ];
 
 let issues = 0;

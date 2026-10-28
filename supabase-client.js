@@ -436,10 +436,14 @@ const BurgerBackend = {
   }
 };
 
-window.BurgerBackend = BurgerBackend;
+if (typeof window !== 'undefined') {
+  window.BurgerBackend = BurgerBackend;
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => BurgerBackend.init());
-} else {
-  BurgerBackend.init();
+  if (typeof document !== 'undefined') {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => BurgerBackend.init());
+    } else {
+      BurgerBackend.init();
+    }
+  }
 }
